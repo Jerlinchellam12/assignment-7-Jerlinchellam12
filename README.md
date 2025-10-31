@@ -58,7 +58,7 @@ The workflow included the following steps:
    - XGBoost classifier
 
 
-3. **Evaluation Metrics** –
+3. **Evaluation Metrics** 
    - Accuracy
    - Weighted F1 Score
    - ROC-AUC (One-vs-Rest)
@@ -105,9 +105,3 @@ Overall, the analysis highlighted how **ROC and PRC curves provide deeper insigh
 - [Scikit-learn Documentation](https://scikit-learn.org/)
 - [XGBoost Documentation](https://xgboost.readthedocs.io/)
   
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
