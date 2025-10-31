@@ -6,9 +6,9 @@ Roll No: DA25C009
 
 Documentation
 
-# 🌍 Multi-Class Model Selection using ROC and Precision-Recall Curves
+# Multi-Class Model Selection using ROC and Precision-Recall Curves
 
-## 🧩 Project Overview
+## Project Overview
 
 This project focuses on classifying land cover types using **satellite image data** from the **UCI Landsat Satellite dataset**.
 
@@ -18,7 +18,7 @@ The main goal is to identify the best-performing model using **ROC (Receiver Ope
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Classify satellite land cover types into six distinct categories.
 - Compare multiple classifiers using **F1 Score**, **ROC-AUC**, and **PRC-AP** metrics.
@@ -27,7 +27,7 @@ The main goal is to identify the best-performing model using **ROC (Receiver Ope
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 Before running this notebook, ensure you have the following Python packages installed:
 ```bash
@@ -39,19 +39,24 @@ pip install numpy pandas matplotlib scikit-learn xgboost
 
 ---
 
-## 🛰️ Dataset and Methodology
+## Dataset and Methodology
 
 The **UCI Landsat Satellite dataset** contains spectral data representing different land cover types such as vegetation, soil, and water.
 
 The workflow included the following steps:
 
-1. **Data Preprocessing** – Cleaning and splitting the dataset into training and testing sets.
+1. **Data Preprocessing** – Splitting the dataset into training and testing sets.
 
 2. **Model Training** – Implemented the following classifiers:
    - K-Nearest Neighbors (KNN)
-   - XGBoost Classifier
-   - Random Forest
-   - Decision Tree
+   - Decision Tree Classifier
+   - Dummy Classifier
+   - Logistic Regression
+   - Naive Bayes
+   - Support Vector Machine(SVM)
+   - Random Forest Classifier
+   - XGBoost classifier
+
 
 3. **Evaluation Metrics** –
    - Accuracy
@@ -63,7 +68,7 @@ The workflow included the following steps:
 
 ---
 
-## 🔍 Observations
+## Observations
 
 - **KNN** consistently produced the highest F1, ROC-AUC, and PRC-AP values, showing smooth and stable performance.
 - **XGBoost** followed closely, performing well on precision but slightly lower on recall compared to KNN.
@@ -72,18 +77,19 @@ The workflow included the following steps:
 
 ---
 
-## 💡 Insights
+## Insights
 
 - ROC and PRC analyses reveal details that accuracy alone cannot show.
 - **KNN** provided the best balance between precision and recall, making it ideal for real-world land classification tasks.
 - **XGBoost** proved to be a strong second choice with powerful learning ability but slightly higher computational cost.
 - **Decision Tree** models, while interpretable, suffered from performance instability across thresholds.
+- **Dummy Classifier** was worst model.
 
 ---
 
 ## 🧾 Conclusion
 
-Through this project, I learned that **threshold-based performance evaluation** is crucial in complex multi-class tasks.
+Through this project, I learned the importance of analyzing model behavior across different thresholds, especially in multi-class problems where accuracy alone can be misleading.
 
 Among all models, **KNN stood out as the best-performing classifier**, showing top performance in every metric.
 
@@ -93,52 +99,12 @@ Overall, the analysis highlighted how **ROC and PRC curves provide deeper insigh
 
 ---
 
-## 📊 Model Performance Summary
+## References
 
-| Model              | Weighted F1 | ROC-AUC (OvR) | PRC-AP |
-|--------------------|-------------|---------------|--------|
-| KNN                | 0.9094      | 0.9842        | 0.9215 |
-| XGBoost            | TBD         | TBD           | TBD    |
-| Random Forest      | TBD         | TBD           | TBD    |
-| Decision Tree      | 0.8481      | 0.9077        | 0.7246 |
-| Logistic Regression| 0.8421      | 0.9775        | 0.8638 |
-| Naive Bayes        | 0.7901      | 0.9540        | 0.7859 |
-| SVM                | 0.8913      | 0.9838        | 0.8996 |
-
----
-
-## 🚀 How to Run
-
-1. Clone this repository:
-```bash
-   git clone https://github.com/yourusername/landsat-classification.git
-   cd landsat-classification
-```
-
-2. Install dependencies:
-```bash
-   pip install -r requirements.txt
-```
-
-3. Open and run the Jupyter notebook:
-```bash
-   jupyter notebook notebooks/model_evaluation.ipynb
-```
-
----
-
-## 📚 References
-
-- [UCI Landsat Satellite Dataset](https://archive.ics.uci.edu/ml/datasets/Statlog+%28Landsat+Satellite%29)
+- [UCI Landsat Satellite Dataset](https://archive.ics.uci.edu/dataset/146/statlog+landsat+satellite)
 - [Scikit-learn Documentation](https://scikit-learn.org/)
 - [XGBoost Documentation](https://xgboost.readthedocs.io/)
-
----
-
-## 👤 Author
-
-**Your Name**  
-[LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/yourusername)
+  
 
 ---
 
